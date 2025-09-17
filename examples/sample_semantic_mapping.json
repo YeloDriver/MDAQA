@@ -1,0 +1,38 @@
+{
+    "8204d8ca03fd498bed2711d87080908f2e296258": {
+        "arxiv_id": "2106.04533",
+        "title": "Token-based Pruning for Vision Transformers"
+    },
+    "b827ca1a0bf9e90ff5738c93409fb2b26a5edfe0": {
+        "arxiv_id": "2106.12620",
+        "title": "Interpretable Vision Transformer Compression via Token Selection"
+    },
+    "79a721de51a943bf5ea06e9831067e84527eb8ba": {
+        "arxiv_id": "2203.08243",
+        "title": "IA-RED²: Interpretability-Aware Redundancy Reduction for Vision Transformers"
+    },
+    "62af0ff09c6fc2d72d613acc32ab9d959fd00679": {
+        "arxiv_id": "2211.15144",
+        "title": "Offline Q-Learning on Diverse Multi-Task Data Both Scales And Generalizes"
+    },
+    "aa71c19d39fa9f592db2f8ec820c041a3ff11714": {
+        "arxiv_id": "1805.03596",
+        "title": "Layered Optical Flow Estimation Using a Deep Neural Network with a Soft Mask"
+    },
+    "a6e731a3b7dc4f34a95201c37cc4309ab92318f0": {
+        "arxiv_id": "2208.10174",
+        "title": "KEEP: An Industrial Pre-Training Framework for Online Recommendation via Knowledge Extraction and Plugging"
+    },
+    "b5898a63d76e5039892533c44a40f4af199f1f18": {
+        "arxiv_id": "2210.01863",
+        "title": "Group Personalized Federated Learning"
+    },
+    "4a7836c610e2deefe4eee3ebe92752aad119225e": {
+        "arxiv_id": "2211.13904",
+        "title": "Policy-Adaptive Estimator Selection for Off-Policy Evaluation"
+    },
+    "4cd92a56dca741190e453b4229eb9851abf6944c": {
+        "arxiv_id": "2109.08668",
+        "title": "Federated Learning with Differential Privacy: Algorithms and Performance Analysis"
+    }
+}

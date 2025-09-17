@@ -1,0 +1,52 @@
+# MDAQA Configuration Template
+# Copy this file to config.yaml and fill in your values
+
+# LLM Configuration - Choose your preferred model provider
+llm:
+  # Supported providers: "openai", "azure_openai", "anthropic_vertex", "ollama", "custom"
+  provider: "YOUR_PROVIDER"
+  
+  # Model configuration (adjust based on your provider)
+  model: "YOUR_MODEL_NAME"  # e.g., "gpt-4o", "claude-3-5-sonnet", "llama2"
+  
+  # API credentials (fill based on your provider)
+  api_key: "YOUR_API_KEY"
+  api_base: "YOUR_API_ENDPOINT"  # Optional, for custom endpoints
+  api_version: "YOUR_API_VERSION"  # Optional, for Azure OpenAI
+  
+  # For Google Cloud Vertex AI (Anthropic)
+  project_id: "YOUR_PROJECT_ID"  # Optional, for Vertex AI
+  region: "YOUR_REGION"  # Optional, for Vertex AI
+  
+  # Model parameters
+  temperature: 0.7
+  max_tokens: 5000
+
+# Data Paths
+data:
+  # Path to SPIQA dataset directory
+  spiqa_path: "./spiqa/SPIQA_train_val_test-A_extracted_paragraphs"
+  
+  # Input data files (you need to provide these)
+  community_data: "./data/community_with_keywords.json"
+  semantic_mapping: "./data/semantic_to_arxiv.json"
+  
+  # Output paths
+  output_dir: "./output"
+  qa_output: "./output/qa.json"
+  evaluation_output: "./output/evaluation.json"
+  final_dataset: "./output/MDAQA.json"
+
+# Processing Parameters
+processing:
+  # File size limits for paper content (in KB)
+  min_file_size: 10
+  max_file_size: 200
+  
+  # Content length limit (in characters)
+  max_content_length: 350000
+  
+  # Retry configuration
+  max_retries: 5
+  base_delay: 1
+  max_delay: 32

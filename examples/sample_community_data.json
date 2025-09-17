@@ -1,0 +1,21 @@
+[
+    {
+        "community_id": 11458,
+        "papers": [
+            "8204d8ca03fd498bed2711d87080908f2e296258",
+            "b827ca1a0bf9e90ff5738c93409fb2b26a5edfe0",
+            "79a721de51a943bf5ea06e9831067e84527eb8ba",
+            "62af0ff09c6fc2d72d613acc32ab9d959fd00679",
+            "aa71c19d39fa9f592db2f8ec820c041a3ff11714"
+        ]
+    },
+    {
+        "community_id": 11459,
+        "papers": [
+            "a6e731a3b7dc4f34a95201c37cc4309ab92318f0",
+            "b5898a63d76e5039892533c44a40f4af199f1f18",
+            "4a7836c610e2deefe4eee3ebe92752aad119225e",
+            "4cd92a56dca741190e453b4229eb9851abf6944c"
+        ]
+    }
+]
