@@ -42,24 +42,6 @@ MDAQA/
 The complete MDAQA dataset is available on Hugging Face:
 **[🔗 MDAQA Dataset on Hugging Face](https://huggingface.co/datasets/YeloDriver/MDAQA)**
 
-### Dataset Format
-
-Each entry in the dataset contains:
-
-```json
-{
-    "id": 0,
-    "question": "What are the key differences between token-based pruning and weight-based pruning approaches for Vision Transformer compression?",
-    "answer": "Token-based pruning reduces input sequence length by removing less informative tokens dynamically based on input content, achieving quadratic complexity reduction in self-attention computation. Weight-based pruning focuses on model parameters but maintains the same sequence length, leading to less computational savings.",
-    "support": ["2106.04533", "2106.12620", "2203.08243"]
-}
-```
-
-- `id`: Unique identifier for the question
-- `question`: Multi-document question requiring synthesis of multiple papers
-- `answer`: Comprehensive answer based on the supporting papers
-- `support`: List of arXiv IDs of papers needed to answer the question
-
 ## Installation
 
 1. Clone this repository:
@@ -87,24 +69,13 @@ llm:
 
 ## Prerequisites
 
-### 1. SPIQA Dataset
-
-This project requires the SPIQA dataset for paper content. Download it from:
-**[SPIQA Dataset on Hugging Face](https://huggingface.co/datasets/google/spiqa)**
-
-After downloading, extract the paper content files to:
-
-```
-./spiqa/SPIQA_train_val_test-A_extracted_paragraphs/
-```
-
-### 2. Input Data Files
+### 1. Input Data Files
 
 You need to provide two input files:
 
 #### Community Data (`community_with_keywords.json`)
 
-Contains paper communities from community detection algorithms:
+Contains a series of paper groups:
 
 ```json
 [
@@ -132,7 +103,29 @@ Maps semantic scholar IDs to arXiv IDs and titles:
 }
 ```
 
-See `examples/` directory for sample formats.
+See `examples/` directory for sample formats. We also provide our input files based on SPIQA in the `data/` directory for testing.
+
+### 2. Paper content
+
+To aqcuire paper contents, we use the SPIQA dataset, which contains pre-extracted paragraphs from scientific papers. Download it from: **[SPIQA Dataset on Hugging Face](https://huggingface.co/datasets/google/spiqa)**
+
+After downloading, extract the paper content files to:
+
+```
+./spiqa/SPIQA_train_val_test-A_extracted_paragraphs/
+```
+
+### 3. Configuration
+
+Configure your data paths in `config/config.yaml`:
+
+```yaml
+data:
+  spiqa_path: "./spiqa/SPIQA_train_val_test-A_extracted_paragraphs"
+  community_data: "./data/community_data.json"
+  semantic_mapping: "./data/semantic_to_arxiv.json"
+  output_dir: "./output"
+```
 
 ## Usage
 
@@ -155,18 +148,6 @@ python main.py evaluate
 
 # Generate final dataset format
 python main.py final
-```
-
-### Data Paths
-
-Configure your data paths in `config/config.yaml`:
-
-```yaml
-data:
-  spiqa_path: "./spiqa/SPIQA_train_val_test-A_extracted_paragraphs"
-  community_data: "./data/community_with_keywords.json"
-  semantic_mapping: "./data/semantic_to_arxiv.json"
-  output_dir: "./output"
 ```
 
 ## Output Files
